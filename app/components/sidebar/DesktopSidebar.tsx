@@ -17,7 +17,8 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
     console.log({ currentUser })
     console.log(session?.user?.email)
     return (
-        <div className='hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-auto xl:px-6 lg:overflow-y-auto lg:bg-white lg:border-r-[1px]
+        <div className='hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:w-auto xl:px-6 lg:overflow-y-auto lg:bg-white 
+        lg:border-r-[1px]
         lg:flex lg:flex-col justify-between'>
             <nav className='mt-4 flex flex-col justify-between'>
                 <ul role="list" className='flex flex-col items-center space-y-3'>
@@ -40,7 +41,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
             justify-between
             items-center
             '>
-                <div onClick={() => setIsOpen(true)} className='cursor-pointer hover:opacity-75 transition'>
+                <div onClick={() => setIsOpen(true)} className='cursor-pointer hover:opacity-75 transition mb-2'>
                     <Avatar user={currentUser!} />
                 </div>
             </nav>

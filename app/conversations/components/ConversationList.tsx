@@ -30,6 +30,7 @@ const ConversationList: React.FC<ConservationListProps> = ({ initialItems }) => 
         overflow-y-auto
         border-r
         border-gray-200
+        hidden
         `,
             isOpen ? 'hidden' : 'block w-full left-0')}>
             <div className='px-5'>

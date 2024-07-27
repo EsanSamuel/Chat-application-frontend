@@ -19,7 +19,7 @@ const useOtherUser = (
       (user) => user.email !== currentUserEmail
     );
 
-    return otherUser;
+    return otherUser[0];
   }, [session?.user?.email, conversation.users]);
   return otherUser;
 };
