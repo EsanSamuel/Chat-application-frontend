@@ -10,7 +10,8 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 import Avatar from "@/app/components/Avatar";
-import Modal from "./Modal";
+import Modal from "../../../components/Modal";
+import ConfirmModal from "./ConfirmModal";
 
 interface ProfileDrawerProps {
   data: Conversation & {
@@ -44,9 +45,10 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
   }, [data]);
   return (
     <>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div className="bg-white p-5">Hello modal</div>
-      </Modal>
+      <ConfirmModal 
+      isOpen={isModalOpen} 
+      onClose={() => setIsModalOpen(false)}
+  />
       <Transition show={isOpen} as={Fragment}>
         <Dialog onClose={onClose} as="div" className="relative z-50">
           <TransitionChild
